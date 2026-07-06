@@ -209,8 +209,24 @@
     var ms = document.querySelector('.am-scroll'); if (ms) ms.scrollTop = 0;
   }
 
+  /* ---------- Auth (demo: click to enter, no validation) ---------- */
+  function login() {
+    document.body.classList.add('authed');
+    try { sessionStorage.setItem('nb_authed', '1'); } catch (err) {}
+    setPanel('overview');
+  }
+  function logout() {
+    document.body.classList.remove('authed');
+    try { sessionStorage.removeItem('nb_authed'); } catch (err) {}
+  }
+  var loginForm = $('login-form');
+  if (loginForm) loginForm.addEventListener('submit', function (e) { e.preventDefault(); login(); });
+  try { if (sessionStorage.getItem('nb_authed') === '1') document.body.classList.add('authed'); } catch (err) {}
+
   /* ---------- One delegated click handler ---------- */
   document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-logout]')) { logout(); return; }
+
     // Most-specific first, so a toggle inside a row wins over the row itself.
     var sec = e.target.closest('[data-sec]');
     if (sec) { var id = sec.getAttribute('data-sec'); state.sections[id] = !state.sections[id]; renderSections(); return; }

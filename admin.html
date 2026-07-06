@@ -13,6 +13,37 @@
 <body>
 
 <!-- ============================================================
+     LOGIN SCREEN (pre-filled demo — click Sign in to enter)
+     ============================================================ -->
+<div class="login-screen" id="login-screen">
+  <div class="login-card">
+    <div class="login-brand">
+      <div class="brand-mark">N</div>
+      <div class="login-brand-tx">
+        <div class="nm">Northbridge <span>Admin</span></div>
+        <div class="sub">Sign in to the admin console</div>
+      </div>
+    </div>
+    <form id="login-form" onsubmit="return false">
+      <div class="login-field">
+        <label>Email</label>
+        <input type="email" id="login-email" value="admin@gmail.com" autocomplete="username">
+      </div>
+      <div class="login-field">
+        <label>Password</label>
+        <input type="password" id="login-pass" value="admin123" autocomplete="current-password">
+      </div>
+      <div class="login-row">
+        <label class="login-remember"><input type="checkbox" checked> Remember me</label>
+        <a class="login-forgot">Forgot password?</a>
+      </div>
+      <button type="submit" class="login-btn" id="login-btn">Sign in</button>
+      <div class="login-note">Demo access — credentials are pre-filled, just click Sign in.</div>
+    </form>
+  </div>
+</div>
+
+<!-- ============================================================
      DESKTOP ADMIN
      ============================================================ -->
 <div class="admin-desktop">
@@ -36,7 +67,7 @@
     <div class="sb-user">
       <div class="ava">AR</div>
       <div style="flex:1;min-width:0"><div class="nm">Alex Romero</div><div class="rl">Administrator</div></div>
-      <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+      <svg data-logout viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
     </div>
   </aside>
 
@@ -279,7 +310,7 @@
         <div class="am-pref"><div><div class="pt">Weekly report</div><div class="pd">Traffic summary on Mondays</div></div><button class="toggle" data-pref="report"><span class="knob"></span></button></div>
         <div class="am-pref"><div><div class="pt">Maintenance mode</div><div class="pd">Holding page for visitors</div></div><button class="toggle" data-pref="maint"><span class="knob"></span></button></div>
       </div>
-      <div class="am-signout"><svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg><span>Sign out</span></div>
+      <div class="am-signout" data-logout><svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg><span>Sign out</span></div>
     </section>
   </div>
 

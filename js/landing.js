@@ -30,10 +30,10 @@
   ];
 
   var PROJECTS = [
-    { tag: 'OPERATIONS', year: '2025', title: 'Meridian Energy — operating model redesign', desc: 'Group-wide redesign across 6 business units; 18% cost-to-serve reduction in year one.' },
-    { tag: 'ADVISORY',   year: '2025', title: 'Atlas Financial — post-merger integration',  desc: 'Integration office for a $2.1B merger; synergy targets hit two quarters early.' },
-    { tag: 'DIGITAL',    year: '2024', title: 'Helix Logistics — digital control tower',    desc: 'Real-time network visibility across 40 hubs; on-time delivery up 11 points.' },
-    { tag: 'STRATEGY',   year: '2024', title: 'Corvane Health — market entry strategy',     desc: 'LATAM entry roadmap and partner search; first market live in 9 months.' }
+    { tag: 'OPERATIONS', year: '2025', img: 'proj-meridian.png', title: 'Meridian Energy — operating model redesign', desc: 'Group-wide redesign across 6 business units; 18% cost-to-serve reduction in year one.' },
+    { tag: 'ADVISORY',   year: '2025', img: 'proj-atlas.png',    title: 'Atlas Financial — post-merger integration',  desc: 'Integration office for a $2.1B merger; synergy targets hit two quarters early.' },
+    { tag: 'DIGITAL',    year: '2024', img: 'proj-helix.png',    title: 'Helix Logistics — digital control tower',    desc: 'Real-time network visibility across 40 hubs; on-time delivery up 11 points.' },
+    { tag: 'STRATEGY',   year: '2024', img: 'proj-corvane.png',  title: 'Corvane Health — market entry strategy',     desc: 'LATAM entry roadmap and partner search; first market live in 9 months.' }
   ];
 
   var TEAM = [
@@ -65,7 +65,7 @@
   }).join(''));
 
   render('projects-grid', PROJECTS.map(function (p) {
-    return '<div class="proj-card"><div class="img-slot proj-img">Project image</div>' +
+    return '<div class="proj-card"><img class="proj-img" src="assets/' + p.img + '" alt="' + p.title + '" loading="lazy">' +
       '<div class="proj-body"><div class="proj-top"><span class="tag">' + p.tag + '</span><span class="year">' + p.year + '</span></div>' +
       '<h3>' + p.title + '</h3><p>' + p.desc + '</p></div></div>';
   }).join(''));

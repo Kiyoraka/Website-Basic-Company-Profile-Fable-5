@@ -63,6 +63,10 @@ button { font: inherit; cursor: pointer; }
   color: rgba(20,80,224,.4); font: 700 14px var(--sans); letter-spacing: .5px;
   text-align: center; padding: 20px;
 }
+/* generated photos fill their slots */
+img.hero-img, img.about-img, img.proj-img {
+  object-fit: cover; background: linear-gradient(135deg, var(--tint), #DCE7FA);
+}
 
 /* ============================================================
    DESKTOP LANDING
