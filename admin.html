@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northbridge — Admin Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<!-- ============================================================
+     DESKTOP ADMIN
+     ============================================================ -->
+<div class="admin-desktop">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sb-brand">
+      <div class="brand-mark">N</div>
+      <div class="nm">Northbridge</div>
+      <div class="sb-badge">ADMIN</div>
+    </div>
+    <div class="sb-label">MAIN</div>
+    <button class="sb-item active" data-panel="overview"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg><span>Overview</span></button>
+    <button class="sb-item" data-panel="content"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg><span>Content</span></button>
+    <button class="sb-item" data-panel="messages"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><polyline points="22 6 12 13 2 6"></polyline></svg><span>Messages</span><span class="count">2</span></button>
+    <button class="sb-item" data-panel="team"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Team</span></button>
+    <button class="sb-item" data-panel="projects"><svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg><span>Projects</span></button>
+    <div class="sb-label" style="padding-top:16px">SYSTEM</div>
+    <button class="sb-item" data-panel="settings"><svg viewBox="0 0 24 24"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg><span>Settings</span></button>
+    <div class="sb-spacer"></div>
+    <div class="sb-user">
+      <div class="ava">AR</div>
+      <div style="flex:1;min-width:0"><div class="nm">Alex Romero</div><div class="rl">Administrator</div></div>
+      <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="admin-main">
+    <div class="topbar">
+      <div class="title" id="panel-title">Overview</div>
+      <div class="spacer"></div>
+      <div class="searchbar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>Search…</span></div>
+      <div class="icon-btn"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg><span class="badge-dot"></span></div>
+      <div class="top-ava">AR</div>
+    </div>
+
+    <div class="admin-scroll">
+
+      <!-- ===== OVERVIEW ===== -->
+      <section class="panel active" data-panel="overview">
+        <div class="panel-head">
+          <div>
+            <div class="h">Good morning, Alex</div>
+            <div class="s">Here's what's happening across northbridge.com</div>
+          </div>
+          <div class="panel-actions">
+            <button class="mini-btn"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>Last 12 months<svg viewBox="0 0 24 24" style="width:13px;height:13px"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+            <button class="mini-btn primary">Export report</button>
+          </div>
+        </div>
+
+        <div class="kpis">
+          <div class="kpi"><div class="top"><span class="lbl">Website visits</span><div class="ic"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div></div><div class="val">48.2K</div><div class="delta"><span class="delta-chip delta-up">+12.4%</span><span class="vs">vs last period</span></div></div>
+          <div class="kpi"><div class="top"><span class="lbl">Inquiries</span><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><polyline points="22 6 12 13 2 6"></polyline></svg></div></div><div class="val">132</div><div class="delta"><span class="delta-chip delta-up">+8.1%</span><span class="vs">vs last period</span></div></div>
+          <div class="kpi"><div class="top"><span class="lbl">Active projects</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div></div><div class="val">18</div><div class="delta"><span class="delta-chip chip-brand">+2 new</span><span class="vs">this month</span></div></div>
+          <div class="kpi"><div class="top"><span class="lbl">Conversion rate</span><div class="ic"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div></div><div class="val">3.4%</div><div class="delta"><span class="delta-chip delta-down">−0.6%</span><span class="vs">vs last period</span></div></div>
+        </div>
+
+        <div class="two-col">
+          <div class="card pad">
+            <div class="chart-head">
+              <div><div class="t">Website visits</div><div class="d">Monthly uniques, Jul 2025 – Jun 2026</div></div>
+              <div class="legend"><span class="sw"></span>Visits</div>
+            </div>
+            <svg class="chart" viewBox="0 0 720 220" preserveAspectRatio="none">
+              <defs><linearGradient id="nbgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1450E0" stop-opacity="0.16"></stop><stop offset="100%" stop-color="#1450E0" stop-opacity="0"></stop></linearGradient></defs>
+              <line x1="0" y1="56" x2="720" y2="56" stroke="#EEF2F8"></line>
+              <line x1="0" y1="104" x2="720" y2="104" stroke="#EEF2F8"></line>
+              <line x1="0" y1="152" x2="720" y2="152" stroke="#EEF2F8"></line>
+              <line x1="0" y1="200" x2="720" y2="200" stroke="#E4EAF3"></line>
+              <path d="M0 176 C30 168 50 150 84 152 C118 154 138 128 172 124 C206 120 226 142 260 136 C294 130 314 100 348 96 C382 92 402 118 436 110 C470 102 490 74 524 70 C558 66 578 92 612 84 C646 76 668 58 700 54 L720 52 L720 200 L0 200 Z" fill="url(#nbgrad)"></path>
+              <path d="M0 176 C30 168 50 150 84 152 C118 154 138 128 172 124 C206 120 226 142 260 136 C294 130 314 100 348 96 C382 92 402 118 436 110 C470 102 490 74 524 70 C558 66 578 92 612 84 C646 76 668 58 700 54 L720 52" fill="none" stroke="#1450E0" stroke-width="2.5"></path>
+              <circle cx="700" cy="54" r="5" fill="#1450E0" stroke="#fff" stroke-width="2.5"></circle>
+            </svg>
+            <div class="chart-x"><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
+          </div>
+          <div class="card pad">
+            <div class="t" style="font:600 15.5px var(--sans)">Inquiries by service</div>
+            <div class="d" style="font:400 12.5px var(--sans);color:var(--faint);margin-top:3px">132 total this period</div>
+            <div class="bars" id="inq-bars"></div>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="card" style="overflow:hidden">
+            <div class="list-head"><div class="t">Recent inquiries</div><div class="link" data-panel="messages">View all</div></div>
+            <div id="recent-inq"></div>
+          </div>
+          <div class="content-side card">
+            <div class="t">Site content</div>
+            <div class="d">Landing page status</div>
+            <div class="cs-rows">
+              <div class="cs-row"><span class="k">Hero</span><span class="v">Updated Jul 2</span></div>
+              <div class="cs-row"><span class="k">Services</span><span class="v">Updated Jun 28</span></div>
+              <div class="cs-row"><span class="k">Projects</span><span class="v">Updated Jun 24</span></div>
+              <div class="cs-row"><span class="k">Testimonials</span><span class="v">Updated Jun 12</span></div>
+            </div>
+            <button class="mini-btn" style="justify-content:center;margin-top:18px" data-panel="content">Manage content</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTENT ===== -->
+      <section class="panel" data-panel="content">
+        <div class="panel-head">
+          <div>
+            <div class="h">Landing page content</div>
+            <div class="s">Reorder, edit, or hide sections — changes go live on publish</div>
+          </div>
+          <div class="panel-actions">
+            <button class="mini-btn">Preview site</button>
+            <button class="mini-btn primary">Publish changes</button>
+          </div>
+        </div>
+        <div class="info-banner">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <span>Last published Jul 3, 2026 · 14:20 — <span id="hidden-count">1</span> section is hidden from the live site.</span>
+        </div>
+        <div class="card sec-list" id="sec-list"></div>
+      </section>
+
+      <!-- ===== MESSAGES ===== -->
+      <section class="panel" data-panel="messages">
+        <div class="card msg-wrap">
+          <div class="msg-list-col">
+            <div class="msg-list-head"><span class="t">Inbox</span><span class="chip chip-brand" style="border-radius:999px">2 new</span></div>
+            <div class="msg-scroll" id="msg-list"></div>
+          </div>
+          <div class="reader">
+            <div class="reader-head">
+              <div class="subj" id="rd-subj"></div>
+              <div class="reader-meta">
+                <div class="reader-av" id="rd-init"></div>
+                <div style="flex:1"><span style="font:600 13.5px var(--sans)" id="rd-name"></span><span style="font:400 13px var(--sans);color:var(--faint)" id="rd-email"></span></div>
+                <span class="chip chip-brand" id="rd-service"></span>
+                <span style="font:400 12px var(--sans);color:var(--faint)" id="rd-time"></span>
+              </div>
+            </div>
+            <div class="reader-body"><p id="rd-body"></p></div>
+            <div class="reply-box">
+              <textarea placeholder="Write a reply…"></textarea>
+              <div class="reply-foot">
+                <svg class="clip" viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                <button class="send-btn"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>Send reply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TEAM ===== -->
+      <section class="panel" data-panel="team">
+        <div class="panel-head">
+          <div><div class="h">Team members</div><div class="s">6 people · shown on the landing page and proposals</div></div>
+          <button class="mini-btn primary"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>Add member</button>
+        </div>
+        <div class="team-grid-a" id="team-cards"></div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section class="panel" data-panel="projects">
+        <div class="panel-head">
+          <div><div class="h">Projects</div><div class="s">18 active · 6 shown</div></div>
+          <button class="mini-btn primary"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>New project</button>
+        </div>
+        <div class="card tbl">
+          <div class="tbl-head"><span>PROJECT</span><span>CLIENT</span><span>STATUS</span><span>PROGRESS</span><span>VALUE</span><span>DUE</span></div>
+          <div id="proj-rows"></div>
+        </div>
+      </section>
+
+      <!-- ===== SETTINGS ===== -->
+      <section class="panel" data-panel="settings">
+        <div class="h" style="font:600 20px var(--sora);letter-spacing:-.4px">Settings</div>
+        <div class="s" style="font:400 13.5px var(--sans);color:#7A87A3;margin-top:4px">Company profile and site preferences</div>
+        <div class="set-grid">
+          <div class="set-card">
+            <div class="t">Company profile</div>
+            <div class="set-fields">
+              <div><label>Company name</label><input placeholder="Northbridge Group Pte Ltd"></div>
+              <div><label>Contact email</label><input placeholder="hello@northbridge.com"></div>
+              <div><label>Phone</label><input placeholder="+65 6555 0142"></div>
+              <div><label>Head office</label><input placeholder="One Northbridge Plaza, Level 21"></div>
+            </div>
+            <div class="set-btns"><button class="mini-btn primary">Save changes</button><button class="mini-btn">Cancel</button></div>
+          </div>
+          <div class="set-card">
+            <div class="t">Preferences</div>
+            <div class="pref-row"><div><div class="pt">Email notifications</div><div class="pd">New inquiry alerts to admins</div></div><button class="toggle" data-pref="notif"><span class="knob"></span></button></div>
+            <div class="pref-row"><div><div class="pt">Weekly report</div><div class="pd">Traffic summary every Monday</div></div><button class="toggle" data-pref="report"><span class="knob"></span></button></div>
+            <div class="pref-row"><div><div class="pt">Maintenance mode</div><div class="pd">Show a holding page to visitors</div></div><button class="toggle" data-pref="maint"><span class="knob"></span></button></div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     MOBILE ADMIN
+     ============================================================ -->
+<div class="admin-mobile">
+  <div class="am-top">
+    <div><div class="title" id="am-title">Overview</div><div class="url">admin.northbridge.com</div></div>
+    <div class="r">
+      <div class="icon-btn" style="width:34px;height:34px"><svg viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg><span class="badge-dot" style="top:7px;right:8px;width:6px;height:6px"></span></div>
+      <div class="top-ava" style="width:34px;height:34px;font-size:12px">AR</div>
+    </div>
+  </div>
+
+  <div class="am-scroll">
+    <!-- OVERVIEW -->
+    <section class="am-panel active" data-panel="overview">
+      <div class="am-kpis">
+        <div class="am-kpi"><div class="lbl">Visits</div><div class="val">48.2K</div><span class="chip delta-up">+12.4%</span></div>
+        <div class="am-kpi"><div class="lbl">Inquiries</div><div class="val">132</div><span class="chip delta-up">+8.1%</span></div>
+        <div class="am-kpi"><div class="lbl">Active projects</div><div class="val">18</div><span class="chip chip-brand">+2 new</span></div>
+        <div class="am-kpi"><div class="lbl">Conversion</div><div class="val">3.4%</div><span class="chip delta-down">−0.6%</span></div>
+      </div>
+      <div class="am-card p">
+        <div class="ch"><span class="t">Visits — last 12 months</span><span class="x">Jun: 5.1K</span></div>
+        <svg class="chart" style="height:110px;margin-top:12px" viewBox="0 0 720 220" preserveAspectRatio="none">
+          <defs><linearGradient id="nbgradm" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1450E0" stop-opacity="0.16"></stop><stop offset="100%" stop-color="#1450E0" stop-opacity="0"></stop></linearGradient></defs>
+          <line x1="0" y1="104" x2="720" y2="104" stroke="#EEF2F8" stroke-width="2"></line>
+          <line x1="0" y1="200" x2="720" y2="200" stroke="#E4EAF3" stroke-width="2"></line>
+          <path d="M0 176 C30 168 50 150 84 152 C118 154 138 128 172 124 C206 120 226 142 260 136 C294 130 314 100 348 96 C382 92 402 118 436 110 C470 102 490 74 524 70 C558 66 578 92 612 84 C646 76 668 58 700 54 L720 52 L720 200 L0 200 Z" fill="url(#nbgradm)"></path>
+          <path d="M0 176 C30 168 50 150 84 152 C118 154 138 128 172 124 C206 120 226 142 260 136 C294 130 314 100 348 96 C382 92 402 118 436 110 C470 102 490 74 524 70 C558 66 578 92 612 84 C646 76 668 58 700 54 L720 52" fill="none" stroke="#1450E0" stroke-width="4"></path>
+        </svg>
+      </div>
+      <div class="am-card">
+        <div class="am-list-head"><span class="t">Recent inquiries</span><span class="link" data-panel="messages">Open inbox</span></div>
+        <div id="am-recent"></div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="am-panel" data-panel="content">
+      <div style="background:var(--tint);border:1px solid var(--tint-brd);border-radius:11px;padding:11px 14px;font:500 12px var(--sans);color:#33415F;margin-bottom:12px">Last published Jul 3 · <span id="am-hidden-count">1</span> section hidden</div>
+      <div class="am-card" style="margin-top:0;overflow:hidden" id="am-sec-list"></div>
+      <button class="btn btn-primary" style="width:100%;margin-top:14px">Publish changes</button>
+    </section>
+
+    <!-- MESSAGES / INBOX -->
+    <section class="am-panel" data-panel="messages">
+      <div id="am-msg-list"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="am-panel" data-panel="projects">
+      <div id="am-proj-list"></div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="am-panel" data-panel="settings">
+      <div class="am-profile">
+        <div class="av">AR</div>
+        <div style="flex:1;min-width:0"><div class="nm">Alex Romero</div><div class="em">alex@northbridge.com · Administrator</div></div>
+        <button class="edit">Edit</button>
+      </div>
+      <div class="am-prefs">
+        <div class="am-pref"><div><div class="pt">Email notifications</div><div class="pd">New inquiry alerts</div></div><button class="toggle" data-pref="notif"><span class="knob"></span></button></div>
+        <div class="am-pref"><div><div class="pt">Weekly report</div><div class="pd">Traffic summary on Mondays</div></div><button class="toggle" data-pref="report"><span class="knob"></span></button></div>
+        <div class="am-pref"><div><div class="pt">Maintenance mode</div><div class="pd">Holding page for visitors</div></div><button class="toggle" data-pref="maint"><span class="knob"></span></button></div>
+      </div>
+      <div class="am-signout"><svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg><span>Sign out</span></div>
+    </section>
+  </div>
+
+  <nav class="am-bottomnav">
+    <button class="am-navbtn active" data-panel="overview"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span>Home</span></button>
+    <button class="am-navbtn" data-panel="content"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg><span>Content</span></button>
+    <button class="am-navbtn" data-panel="messages"><span class="ndot"></span><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><polyline points="22 6 12 13 2 6"></polyline></svg><span>Inbox</span></button>
+    <button class="am-navbtn" data-panel="projects"><svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg><span>Projects</span></button>
+    <button class="am-navbtn" data-panel="settings"><svg viewBox="0 0 24 24"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg><span>Settings</span></button>
+  </nav>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
